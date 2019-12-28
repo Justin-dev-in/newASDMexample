@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    
+</head>
+<body>
+    <input type="text" id='txt'><button type="button" id='btn'>Add</button>
+	<button type="button" id="btn2">Remove</button>
+    <ul id="additem">
+
+    </ul>
+    <script>
+	
+	
+	
+        document.getElementById('btn').onclick=function(){
+		    var uli=document.getElementById("additem");
+			var cd=document.getElementById("txt");
+            var list=document.createElement('li');
+           // var t=document.getElementById('txt').value;
+          //  var text=document.createTextNode(t);
+		    list.setAttribute("id",cd.value);
+			list.appendChild(document.createTextNode(cd.value));
+            uli.appendChild(list);
+           
+        }
+		document.getElementById('btn2').onclick=function(){
+		     var uli=document.getElementById("additem");
+			 var cd=document.getElementById("txt");
+			 if(document.getElementById(cd.value))
+			 {
+			 var item=document.getElementById(cd.value);
+			
+			 uli.removeChild(item);
+			 }
+			 else
+			 {
+			   alert("Entered item not in list");
+			 }
+	    }
+		                   
+    </script>
+</body>
+</html>

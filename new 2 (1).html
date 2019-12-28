@@ -1,0 +1,29 @@
+<html>
+<head><title>buttdispr</title>
+</head>
+
+<body>
+<img src="‪img.png" id="im"></img>
+<button id="bt">New Text</button>
+<script>
+ var im=document.getElementById("im").style;
+ var oldtxt=document.getElementById("bt").font;
+ document.getElementById("bt").addEventListener("click",function(){
+                             if(document.getElementById("bt").innerHTML=="New Text"){
+                            document.getElementById("im").style.visibility="hidden";
+                           document.getElementById("bt").innerHTML="old text";
+						   }
+						   else if(document.getElementById("bt").innerHTML=="old text"){
+						   document.getElementById("im").style.visibility="visible";
+						   document.getElementById("bt").innerHTML="New Text";
+						   }
+						   
+ })
+ 
+ 
+ 
+
+							 </script>
+</body>
+</html>							 
+							 
